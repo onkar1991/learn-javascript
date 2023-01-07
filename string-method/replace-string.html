@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String replace</title>
+    <style>
+        button{
+            width:100px;
+            height: 40px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        pre{
+            font-size: 1rem;
+            margin: 0px;
+            padding: 0px;
+            white-space: nowrap;
+        }
+        div{
+            margin: 80px 0px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+    <pre>
+       // replace only first match
+        </pre>
+    <h1 class="heading">My name is onkar chand. onkar is web designer</h1>
+    <button onClick="replaceContent()">Replace text</button>
+</div>
+    
+    <div><pre>
+        // replace only first match
+         </pre>
+    <h1 class="heading-all">My name is onkar chand. onkar is web designer</h1>
+    <button onClick="replaceAllContent()">Replace text</button>
+</div>
+
+<div><pre>
+    // replace case senstive text
+     </pre>
+<h1 class="heading-case">My name is ONKAR chand</h1>
+<button onClick="replaceAllCaseContent()">Replace text</button>
+</div>
+
+
+<div><pre>
+    // replace all text
+     </pre>
+<h1 class="heading-replace">My name is onkar chand. onkar is web designer</h1>
+<button onClick="replaceAllContentMatch()">Replace text</button>
+</div>
+
+   <script>
+    // replace all match
+    
+    function replaceContent(){
+    let labelFirst = document.querySelector(".heading");
+    let labelDataFirst = labelFirst.innerHTML;
+    let replaceValueFirst = labelDataFirst.replace("onkar","omi");
+    document.querySelector(".heading").innerHTML = replaceValueFirst;
+    }
+
+    // replace all matched content
+    function replaceAllContent(){
+    let labelTwo = document.querySelector(".heading-all");
+    let labelDataTwo = labelTwo.innerHTML;
+    let replaceValueTwo = labelDataTwo.replace(/onkar/g,"omi");
+    document.querySelector(".heading-all").innerHTML = replaceValueTwo;
+    }
+
+    // replace all matched content
+    function replaceAllCaseContent(){
+    let labelThree = document.querySelector(".heading-case");
+    let labelDataThree = labelThree.innerHTML;
+    let replaceValueThree = labelDataThree.replace(/onkar/i,"omi");
+    document.querySelector(".heading-case").innerHTML = replaceValueThree;
+    }
+
+
+    
+    // replace all content
+    function replaceAllContentMatch(){
+    let labelFour = document.querySelector(".heading-replace");
+    let labelDataFour = labelFour.innerHTML;
+    let replaceValueFour = labelDataFour.replaceAll("onkar","omi");
+    document.querySelector(".heading-replace").innerHTML = replaceValueFour;
+    }
+    
+   </script>
+
+</body>
+</html>

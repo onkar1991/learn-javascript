@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trim</title>
+    <style>
+        button{
+            width:200px;
+            height: 40px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        pre{
+            font-size: 1rem;
+            margin: 0px;
+            padding: 0px;
+            white-space: nowrap;
+        }
+        div{
+            margin: 80px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <pre>
+           // check length before trim
+            </pre>
+        <h1 class="heading-1">      My name is onkar chand.    </h1>
+        <button onClick="beforeTrim()">convert to uppercase</button>
+        <script>
+            // change to uppercase
+            
+            function beforeTrim(){
+            let labelFirst = document.querySelector(".heading-1");
+            let labelDataFirst = labelFirst.innerHTML;
+            let replaceValueFirst = labelDataFirst.length;
+            document.querySelector(".heading-1").innerHTML = replaceValueFirst;
+            }
+
+            </script>
+    </div>
+
+    <div>
+        <pre>
+           // check length after trim
+            </pre>
+        <h1 class="heading-2">      My name is onkar chand.    </h1>
+        <button onClick="afterTrim()">Click</button>
+        <script>
+            // change to uppercase
+            
+            function afterTrim(){
+           
+            let labelSecond = document.querySelector(".heading-2");
+            let labelDataSecond = labelSecond.innerHTML;
+            let replaceValueSecond = labelDataSecond.trim();
+            document.querySelector(".heading-2").innerHTML = replaceValueSecond.length;
+            }
+
+            </script>
+    </div>
+
+
+    <div>
+        <pre>
+           // trimStart
+            </pre>
+        <h1 class="heading-3">      My name is onkar chand.    </h1>
+        <button onClick="trimS()">Click</button>
+        <script>
+            // change to uppercase
+            
+            function trimS(){
+           
+            let labelthird= document.querySelector(".heading-3");
+            let labelDatathird = labelthird.innerHTML;
+            let replaceValuethird = labelDatathird.trimStart();
+            document.querySelector(".heading-3").innerHTML = replaceValuethird.length;
+            }
+
+            </script>
+    </div>
+
+    <div>
+        <pre>
+           // trimend
+            </pre>
+        <h1 class="heading-4">      My name is onkar chand.    </h1>
+        <button onClick="trimE()">Click</button>
+        <script>
+            // change to uppercase
+            
+            function trimE(){
+           
+            let labelfour= document.querySelector(".heading-4");
+            let labelDatafour = labelfour.innerHTML;
+            let replaceValuefour = labelDatafour.trimStart();
+            document.querySelector(".heading-4").innerHTML = replaceValuefour.length;
+            }
+
+            </script>
+    </div>
+    
+</body>
+</html>
